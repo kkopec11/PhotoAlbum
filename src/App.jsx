@@ -6,12 +6,14 @@ import useStyles from './styles';
 const App = () => {
     const classes = useStyles();
 
+    const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
     return (
         <>
             <CssBaseline />
             <AppBar position="relative">
                 <Toolbar>
-                    <PhotoCamera />
+                    <PhotoCamera className={classes.icon} />
                     <Typography variant="h6">
                         Photo Album
                     </Typography>
@@ -24,9 +26,9 @@ const App = () => {
                             Photo Album
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Hellooo slfsdfsdfsdf
+                            Hellooo
                         </Typography>
-                        <div>
+                        <div className={classes.button}>
                             <Grid container spacing={2} justify="center">
                                 <Grid item>
                                     <Button variant="contained" color="primary">
@@ -40,9 +42,48 @@ const App = () => {
                                 </Grid>
                             </Grid>
                         </div>
+                        <Container className={classes.cardGrid} maxWidth="md">
+                            <Grid container spacing={4}>
+                                {cards.map((card) => (
+                                    <Grid item key={card} xs={12} sm={6} md={4} lg={4}>
+                                        <Card className={classes.card}>
+                                            <CardMedia
+                                                className={classes.cardMedia}
+                                                image="https://source.unsplash.com/random"
+                                                title="Tmage title"
+                                            />
+                                            <CardContent classes={classes.cardContent}>
+                                                <Typography gutterBottom variant="h5">
+                                                    Heading
+                                                </Typography>
+                                                <Typography >
+                                                    This is a media card.
+                                                </Typography>
+                                            </CardContent>
+                                            <CardActions>
+                                                <Button size="small" color="primary">
+                                                    View
+                                                </Button>
+                                                <Button size="small" color="primary">
+                                                    Edit
+                                                </Button>
+                                            </CardActions>
+                                        </Card>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </Container>
                     </Container>
                 </div>
             </main>
+            <footer className={classes.footer}>
+                <Typography variant="h6" align="center" gutterBottom>
+                    Footer
+                </Typography>
+                <Typography variant="subtitle1" align="center" color="textSecondary">
+                    Something gere to give the footer a purpose!
+                </Typography>
+            </footer>
         </>
     )
 }
