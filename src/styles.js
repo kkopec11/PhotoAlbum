@@ -8,8 +8,9 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         marginRight: '20px',
     },
-    button: {
+    buttonsGrid: {
         marginTop: '40px',
+        marginBottom: '20px',
     },
     card: {
         height: '100%',
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
     },
     cardGrid: {
-        padding: '20px 0',
+        padding: '20px 200px 10px 200px ',
     },
     cardMedia: {
         paddingTop: '56.25%' // ratio 16:9

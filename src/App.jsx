@@ -2,6 +2,9 @@ import React, { } from 'react';
 import { Typography, AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container } from '@material-ui/core';
 import { PhotoCamera } from '@material-ui/icons';
 import useStyles from './styles';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
+import IconButton from '@material-ui/core/IconButton';
 
 const App = () => {
     const classes = useStyles();
@@ -26,9 +29,9 @@ const App = () => {
                             Photo Album
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Hellooo
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Typography>
-                        <div className={classes.button}>
+                        <div className={classes.buttonsGrid}>
                             <Grid container spacing={2} justify="center">
                                 <Grid item>
                                     <Button variant="contained" color="primary">
@@ -42,37 +45,44 @@ const App = () => {
                                 </Grid>
                             </Grid>
                         </div>
-                        <Container className={classes.cardGrid} maxWidth="md">
-                            <Grid container spacing={4}>
-                                {cards.map((card) => (
-                                    <Grid item key={card} xs={12} sm={6} md={4} lg={4}>
-                                        <Card className={classes.card}>
-                                            <CardMedia
-                                                className={classes.cardMedia}
-                                                image="https://source.unsplash.com/random"
-                                                title="Tmage title"
-                                            />
-                                            <CardContent classes={classes.cardContent}>
-                                                <Typography gutterBottom variant="h5">
-                                                    Heading
-                                                </Typography>
-                                                <Typography >
-                                                    This is a media card.
-                                                </Typography>
-                                            </CardContent>
-                                            <CardActions>
-                                                <Button size="small" color="primary">
-                                                    View
-                                                </Button>
-                                                <Button size="small" color="primary">
-                                                    Edit
-                                                </Button>
-                                            </CardActions>
-                                        </Card>
-                                    </Grid>
-                                ))}
-                            </Grid>
-                        </Container>
+                    </Container>
+
+                    <Container className={classes.cardGrid} maxWidth="xl">
+                        <Grid container spacing={4}>
+                            {cards.map((card) => (
+                                <Grid item key={card} xs={12} sm={6} md={4} lg={6}>
+                                    <Card className={classes.card}>
+                                        <CardMedia
+                                            className={classes.cardMedia}
+                                            image="https://source.unsplash.com/random"
+                                            title="Tmage title"
+                                        />
+                                        <CardContent classes={classes.cardContent}>
+                                            <Typography gutterBottom variant="h5">
+                                                Heading
+                                            </Typography>
+                                            <Typography >
+                                                This is some photo.
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions align="center">
+                                            <Button size="small" color="primary">
+                                                View
+                                            </Button>
+                                            <Button size="small" color="primary">
+                                                Edit
+                                            </Button>
+                                            <IconButton aria-label="add to favorites">
+                                                <FavoriteIcon />
+                                            </IconButton>
+                                            <IconButton aria-label="share">
+                                                <ShareIcon />
+                                            </IconButton>
+                                        </CardActions>
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
                     </Container>
                 </div>
             </main>
