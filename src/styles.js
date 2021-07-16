@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     },
     cardGrid: {
         padding: '20px 200px 10px 200px ',
+        [theme.breakpoints.down('lg')]: {
+            padding: '16px',
+        },
     },
     cardMedia: {
         paddingTop: '56.25%' // ratio 16:9

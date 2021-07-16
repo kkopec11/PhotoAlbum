@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 const App = () => {
     const classes = useStyles();
 
-    const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const cards = [1, 2, 3, 4, 5, 6, 7, 8];
 
     return (
         <>
@@ -46,7 +46,6 @@ const App = () => {
                             </Grid>
                         </div>
                     </Container>
-
                     <Container className={classes.cardGrid} maxWidth="xl">
                         <Grid container spacing={4}>
                             {cards.map((card) => (
@@ -59,7 +58,7 @@ const App = () => {
                                         />
                                         <CardContent classes={classes.cardContent}>
                                             <Typography gutterBottom variant="h5">
-                                                Heading
+                                                Title
                                             </Typography>
                                             <Typography >
                                                 This is some photo.
@@ -91,7 +90,7 @@ const App = () => {
                     Footer
                 </Typography>
                 <Typography variant="subtitle1" align="center" color="textSecondary">
-                    Something gere to give the footer a purpose!
+                    “The picture that you took with your camera is the imagination you want to create with reality.” — Scott Lorenzo
                 </Typography>
             </footer>
         </>
