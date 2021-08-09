@@ -1,8 +1,8 @@
 # PhotoAlbum
 
-My own implementation of a classic weather app. 
-In the future this will be expanded by including a back-end database to enable the user to directly select cities and countries, 
-rather than having to enter those variables manually.
+A photo album web-app. 
+One of my first projects when I was learning MaterialUI library. 
+I am going to be adding further functionalities such as account creation.
 
 Setup:
 - run ```npm i && npm start``` 
