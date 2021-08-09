@@ -5,4 +5,4 @@ In the future this will be expanded by including a back-end database to enable t
 rather than having to enter those variables manually.
 
 Setup:
-run npm i && npm start for both client and server side to start the development server
+- run ```npm i && npm start``` for both client and server side to start the development server
