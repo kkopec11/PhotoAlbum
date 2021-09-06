@@ -6,3 +6,6 @@ I am going to be adding further functionalities such as account creation.
 
 Setup:
 - run ```npm i && npm start``` 
+
+Live:
+https://photo-album-kkopec.netlify.app/
