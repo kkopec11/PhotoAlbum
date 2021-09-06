@@ -29,11 +29,7 @@ const App = () => {
                             Photo Album
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-<<<<<<< HEAD
-                            Add your favourite photos to your own album!
-=======
-                            xyz
->>>>>>> 7afbd0b (Test xyz)
+                            Add your favourite photos to your own album! xyz
                         </Typography>
                         <div className={classes.buttonsGrid}>
                             <Grid container spacing={2} justify="center">
