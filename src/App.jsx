@@ -29,7 +29,7 @@ const App = () => {
                             Photo Album
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Add your favourite photos to your own album!
                         </Typography>
                         <div className={classes.buttonsGrid}>
                             <Grid container spacing={2} justify="center">
